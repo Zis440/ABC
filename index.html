@@ -1712,46 +1712,23 @@
         const data = {
 
             joining: {
-
-                title:
-                    'Joining Documents',
-
-                text:
-                    'Please complete the documents requested by the HR/onboarding process, including identity and personal details, education and experience records, bank/payroll information and other applicable joining formalities. If anything is pending or requires correction, raise it early.'
-
+                title: 'Joining Documents',
+                text: 'Please complete the documents requested by HR to finalize your onboarding. <br><br><b>Key requirements include:</b><br>• Identity and personal details<br>• Education and past experience records<br>• Bank and payroll information<br><br>If any document is pending or needs correction, please raise it early to avoid delays.'
             },
-
 
             post: {
-
-                title:
-                    'Post-Joining Documents',
-
-                text:
-                    'Keep your employee records and required acknowledgements complete. Review any pending items communicated by HR and close them promptly so documentation does not become an operational blocker.'
-
+                title: 'Post-Joining Documents',
+                text: 'Keep your employee records and required acknowledgements up to date. <br><br><b>Action items:</b><br>• Review pending items communicated by HR<br>• Complete required policy acknowledgements<br>• Submit any outstanding employee records<br><br>Close these promptly so documentation does not become an operational blocker.'
             },
-
 
             support: {
-
-                title:
-                    'Your Support Network',
-
-                text:
-                    'Your reporting manager supports role clarity, coaching, targets and performance conversations. Your buddy or peer can help with practical day-to-day questions. HR can support onboarding, people-related and employee queries.'
-
+                title: 'Your Support Network',
+                text: 'We are here to help you succeed. Reach out to the right contact for your needs: <br><br>• <b>Reporting Manager:</b> Role clarity, coaching, targets, and performance<br>• <b>Buddy or Peer:</b> Practical day-to-day questions and settling in<br>• <b>HR:</b> Onboarding, people-related queries, and employee support'
             },
 
-
             training: {
-
-                title:
-                    'Learning & Training',
-
-                text:
-                    'Complete your initial training and learning activities, understand the processes required for your role and raise any training gap early. Your manager should help connect training with your day-to-day responsibilities.'
-
+                title: 'Learning & Training',
+                text: 'Set yourself up for success by completing your learning activities. <br><br><b>Focus areas:</b><br>• Complete initial training and mandatory modules<br>• Understand key processes required for your role<br>• Work with your manager to connect training to daily tasks<br><br>If you identify any training gaps, raise them early.'
             }
 
         };
@@ -1769,7 +1746,7 @@
 
             document.getElementById(
                 'modalText'
-            ).textContent =
+            ).innerHTML =
                 data[key].text;
 
 
