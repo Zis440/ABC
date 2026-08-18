@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aditya Birla Capital | Health Insurance — New Joiner Portal</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --red: #c8102e;
+            --red2: #e8392a;
+            --orange: #f36f35;
+            --gold: #ffb347;
+            --navy: #191a2d;
+            --muted: #687080;
+            --bg: #f7f5f2;
+            --card: #ffffff;
+            --line: #e8e5e1;
+            --green: #2d8a62;
+            --shadow: 0 14px 45px rgba(25, 26, 45, .08);
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--navy);
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        /* ================= HEADER ================= */
+
+        .topbar {
+            height: 72px;
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        /*
+   Replace this image with your actual logo file.
+   Example:
+   <img src="abc-logo.jpg">
+*/
+
+        .brand-logo {
+            width: 154px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 3px;
+            display: block;
+        }
+
+        .brand-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #252638;
+            line-height: 1.2;
+
+            border-left: 1px solid #ddd;
+            padding-left: 14px;
+        }
+
+        .brand-label small {
+            display: block;
+            color: #777;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        .nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav button {
+            border: 0;
+            background: transparent;
+
+            padding: 10px 13px;
+
+            border-radius: 9px;
+
+            color: #555;
+            font-weight: 600;
+        }
+
+        .nav button:hover,
+        .nav button.active {
+            background: #fff0f1;
+            color: var(--red);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            padding: 66px 6% 58px;
+
+            background:
+                linear-gradient(120deg,
+                    #fff 0%,
+                    #fff5f4 55%,
+                    #fff0dd 100%);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:after {
+            content: "";
+
+            position: absolute;
+
+            width: 390px;
+            height: 390px;
+
+            border-radius: 50%;
+
+            right: -140px;
+            top: -190px;
+
+            background: #c8102e12;
+        }
+
+        .hero-inner {
+            max-width: 1180px;
+            margin: auto;
+
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: var(--red);
+            font-weight: 700;
+
+            margin-bottom: 13px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.08;
+
+            max-width: 760px;
+
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            max-width: 720px;
+
+            color: #626775;
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+
+            margin-top: 28px;
+
+            flex-wrap: wrap;
+        }
+
+        .primary,
+        .secondary {
+            border-radius: 10px;
+
+            padding: 13px 19px;
+
+            font-weight: 700;
+
+            border: 1px solid transparent;
+        }
+
+        .primary {
+            background: var(--red);
+            color: white;
+        }
+
+        .primary:hover {
+            background: #a80d27;
+        }
+
+        .secondary {
+            background: white;
+            border-color: #ddd;
+            color: var(--navy);
+        }
+
+        /* ================= CONTAINER ================= */
+
+        .container {
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding: 42px 6% 70px;
+        }
+
+        .section {
+            scroll-margin-top: 95px;
+
+            margin-bottom: 52px;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .section-head h2 {
+            font-size: 29px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            max-width: 610px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card);
+
+            border: 1px solid var(--line);
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            box-shadow: var(--shadow);
+
+            transition: .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 45px rgba(25, 26, 45, .12);
+        }
+
+        .icon {
+            width: 42px;
+            height: 42px;
+
+            border-radius: 11px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 15px;
+
+            font-size: 20px;
+        }
+
+        .i1 {
+            background: #fff0f1;
+        }
+
+        .i2 {
+            background: #fff2e6;
+        }
+
+        .i3 {
+            background: #eef7f1;
+        }
+
+        .i4 {
+            background: #f1effa;
+        }
+
+        .card h3 {
+            font-size: 19px;
+
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 13px;
+
+            color: var(--muted);
+
+            line-height: 1.65;
+        }
+
+        .card button {
+            margin-top: 16px;
+
+            border: 0;
+
+            background: transparent;
+
+            color: var(--red);
+
+            font-weight: 700;
+
+            font-size: 13px;
+
+            padding: 0;
+        }
+
+        /* ================= PROGRESS ================= */
+
+        .progress {
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-radius: 16px;
+
+            padding: 22px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .progress-top {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 15px;
+        }
+
+        .progress-top strong {
+            font-size: 14px;
+        }
+
+        .percent {
+            color: var(--red);
+
+            font-weight: 800;
+        }
+
+        .bar {
+            height: 8px;
+
+            background: #eee;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .fill {
+            width: 28%;
+
+            height: 100%;
+
+            background:
+                linear-gradient(90deg,
+                    var(--red),
+                    var(--orange),
+                    var(--gold));
+        }
+
+        /* ================= TIMELINE ================= */
+
+        .timeline {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+        .phase {
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            position: relative;
+        }
+
+        .phase:before {
+            content: "";
+
+            display: block;
+
+            width: 9px;
+            height: 9px;
+
+            background: var(--red);
+
+            border-radius: 50%;
+
+            margin-bottom: 15px;
+        }
+
+        .phase:nth-child(2):before {
+            background: var(--orange);
+        }
+
+        .phase:nth-child(3):before {
+            background: var(--gold);
+        }
+
+        .phase:nth-child(4):before {
+            background: #4a90d9;
+        }
+
+        .phase .day {
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.3px;
+
+            color: #8a8f99;
+
+            font-weight: 700;
+        }
+
+        .phase h3 {
+            font-size: 19px;
+
+            margin: 5px 0 8px;
+        }
+
+        .phase p {
+            font-size: 13px;
+
+            color: var(--muted);
+
+            line-height: 1.6;
+        }
+
+        /* ================= ROLE ================= */
+
+        .role {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr .9fr;
+
+            gap: 18px;
+        }
+
+        .role-panel {
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-radius: 16px;
+
+            padding: 26px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .role-panel h3 {
+            font-size: 23px;
+
+            margin-bottom: 12px;
+        }
+
+        .role-panel p,
+        .role-panel li {
+            font-size: 14px;
+
+            color: var(--muted);
+
+            line-height: 1.7;
+        }
+
+        .role-panel ul {
+            padding-left: 20px;
+        }
+
+        /* ================= TARGET TABLE ================= */
+
+        .target-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: white;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid var(--line);
+        }
+
+        .target-table th,
+        .target-table td {
+            padding: 15px;
+
+            text-align: left;
+
+            border-bottom: 1px solid var(--line);
+
+            font-size: 13px;
+        }
+
+        .target-table th {
+            background: #fff4f4;
+
+            color: var(--red);
+
+            font-weight: 700;
+        }
+
+        .target-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        /* ================= CHECK-IN ================= */
+
+        .check {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .check-card {
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-radius: 14px;
+
+            padding: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 12px;
+        }
+
+        .check-card span {
+            font-size: 14px;
+        }
+
+        .check-card button {
+            border: 1px solid #ddd;
+
+            background: #fff;
+
+            border-radius: 8px;
+
+            padding: 8px 12px;
+
+            color: #555;
+
+            font-weight: 600;
+        }
+
+        .check-card button.done {
+            background: #edf8f2;
+
+            color: var(--green);
+
+            border-color: #bde4ce;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background:
+                linear-gradient(120deg,
+                    var(--red),
+                    var(--orange));
+
+            color: white;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .cta h2 {
+            font-size: 28px;
+
+            margin-bottom: 6px;
+        }
+
+        .cta p {
+            color: #fff9;
+
+            font-size: 14px;
+        }
+
+        .cta button {
+            background: white;
+
+            color: var(--red);
+
+            border: 0;
+
+            border-radius: 10px;
+
+            padding: 12px 18px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: var(--navy);
+
+            color: #fff;
+
+            padding: 30px 6%;
+
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .footer-muted {
+            color: #a8a9b5;
+        }
+
+        .footer-logo {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background: #191a2db8;
+
+            z-index: 50;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+
+            border-radius: 16px;
+
+            max-width: 560px;
+
+            width: 100%;
+
+            padding: 28px;
+
+            box-shadow:
+                0 25px 70px #0004;
+        }
+
+        .modal-box h2 {
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .modal-box p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        .modal-close {
+            float: right;
+
+            border: 0;
+
+            background: #f4f4f4;
+
+            border-radius: 50%;
+
+            width: 32px;
+            height: 32px;
+        }
+
+        /* ================= TOAST ================= */
+
+        .toast {
+            position: fixed;
+
+            bottom: 24px;
+
+            right: 24px;
+
+            background: var(--navy);
+
+            color: #fff;
+
+            padding: 13px 17px;
+
+            border-radius: 10px;
+
+            display: none;
+
+            z-index: 80;
+
+            font-size: 13px;
+
+            box-shadow:
+                0 12px 35px #0003;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:900px) {
+
+            .cards {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .timeline {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .role {
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+        @media(max-width:650px) {
+
+            .topbar {
+                padding: 0 4%;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 48px 5%;
+            }
+
+            .container {
+                padding: 35px 5%;
+            }
+
+            .cards,
+            .check {
+                grid-template-columns:
+                    1fr;
+            }
+
+            h1 {
+                font-size: 37px;
+            }
+
+            .timeline {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+
+            .cta {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <img class="brand-logo" src="abc-logo.jpeg" alt="Aditya Birla Capital">
+
+            <div class="brand-label">
+
+                Health Insurance
+
+                <small>
+                    New Joiner Experience
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="nav">
+
+            <button class="active" onclick="go('home')">
+                Home
+            </button>
+
+            <button onclick="go('onboarding')">
+                Onboarding
+            </button>
+
+            <button onclick="go('role')">
+                My Role
+            </button>
+
+            <button onclick="go('targets')">
+                Targets
+            </button>
+
+            <button onclick="go('checkin')">
+                Check-in
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-inner">
+
+            <div class="eyebrow">
+                New Joiner Experience
+            </div>
+
+            <h1>
+                A confident start to your journey with us.
+            </h1>
+
+            <p>
+                Everything you need to complete your
+                joining formalities, understand your role,
+                connect with your support network and build
+                momentum in your first 90 days.
+            </p>
+
+
+            <div class="hero-actions">
+
+                <button class="primary" onclick="go('onboarding')">
+                    Begin Onboarding
+                </button>
+
+                <button class="secondary" onclick="openModal('support')">
+                    Contact Support
+                </button>
+
+                <div class="secondary" style="display: inline-flex; align-items: center; height: fit-content; font-weight: 700;">
+                <span style="color: var(--navy);">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKSZND-rvyH0wCmzHu1sx8_oQP2hNIyywejkhCH8S8wPqW5A/viewform?usp=publish-editor" target="_blank" style="color: var(--red); text-decoration: none;">Click or tap here</a> to fill out this survey form.
+                </span>
+            </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- ONBOARDING -->
+
+        <section class="section" id="onboarding">
+
+            <div class="section-head">
+
+                <div>
+
+                    <div class="eyebrow">
+                        01 · Getting Started
+                    </div>
+
+                    <h2>
+                        Your onboarding essentials
+                    </h2>
+
+                </div>
+
+                <p>
+                    A clear checklist helps you settle in quickly
+                    and ensures the important joining steps are
+                    completed on time.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- Joining Documents -->
+
+                <div class="card">
+
+                    <div class="icon i1">
+                        ▣
+                    </div>
+
+                    <h3>
+                        Joining Documents
+                    </h3>
+
+                    <p>
+                        Complete identity, education,
+                        experience, bank and other required
+                        joining information.
+                    </p>
+
+                    <button onclick="openModal('joining')">
+                        View checklist →
+                    </button>
+
+                </div>
+
+
+                <!-- Post Joining -->
+
+                <div class="card">
+
+                    <div class="icon i2">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Post-Joining Documents
+                    </h3>
+
+                    <p>
+                        Review required acknowledgements,
+                        employee records and any pending
+                        documentation.
+                    </p>
+
+                    <button onclick="openModal('post')">
+                        View details →
+                    </button>
+
+                </div>
+
+
+                <!-- Manager -->
+
+                <div class="card">
+
+                    <div class="icon i3">
+                        ◎
+                    </div>
+
+                    <h3>
+                        Manager & Buddy
+                    </h3>
+
+                    <p>
+                        Know who to approach for role guidance,
+                        field support, operational questions
+                        and day-to-day help.
+                    </p>
+
+                    <button onclick="openModal('support')">
+                        Know your support →
+                    </button>
+
+                </div>
+
+
+                <!-- Training -->
+
+                <div class="card">
+
+                    <div class="icon i4">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Learning & Training
+                    </h3>
+
+                    <p>
+                        Complete your initial learning activities
+                        and raise training needs early.
+                    </p>
+
+                    <button onclick="openModal('training')">
+                        Explore learning →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress" style="margin-top:18px">
+
+                <div class="progress-top">
+
+                    <strong>
+                        Onboarding completion
+                    </strong>
+
+                    <span class="percent" id="percent">
+                        28%
+                    </span>
+
+                </div>
+
+                <div class="bar">
+
+                    <div class="fill" id="fill"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FIRST 90 DAYS -->
+
+        <section class="section">
+
+            <div class="section-head">
+
+                <div>
+
+                    <div class="eyebrow">
+                        02 · First 90 Days
+                    </div>
+
+                    <h2>
+                        Your journey, step by step
+                    </h2>
+
+                </div>
+
+                <p>
+                    Regular touchpoints create space for questions,
+                    coaching, support and early action.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="phase">
+
+                    <div class="day">
+                        Day 0–7
+                    </div>
+
+                    <h3>
+                        Settle In
+                    </h3>
+
+                    <p>
+                        Meet your manager and buddy,
+                        clarify your role, receive access
+                        and understand the basics of your work.
+                    </p>
+
+                </div>
+
+
+                <div class="phase">
+
+                    <div class="day">
+                        Day 7
+                    </div>
+
+                    <h3>
+                        Connect
+                    </h3>
+
+                    <p>
+                        Share how you are settling in,
+                        including manager support, workload,
+                        role clarity, training and blockers.
+                    </p>
+
+                </div>
+
+
+                <div class="phase">
+
+                    <div class="day">
+                        Day 30–60
+                    </div>
+
+                    <h3>
+                        Build Momentum
+                    </h3>
+
+                    <p>
+                        Review field coaching, training progress,
+                        target readiness and any support needed
+                        to perform confidently.
+                    </p>
+
+                </div>
+
+
+                <div class="phase">
+
+                    <div class="day">
+                        Day 90
+                    </div>
+
+                    <h3>
+                        Look Ahead
+                    </h3>
+
+                    <p>
+                        Review progress, engagement and
+                        next-stage goals with your manager
+                        and HR.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ROLE -->
+
+        <section class="section" id="role">
+
+            <div class="section-head">
+
+                <div>
+
+                    <div class="eyebrow">
+                        03 · Role Clarity
+                    </div>
+
+                    <h2>
+                        Know what success looks like
+                    </h2>
+
+                </div>
+
+                <p>
+                    Clear expectations from the beginning make
+                    it easier to learn, perform and ask for help
+                    when needed.
+                </p>
+
+            </div>
+
+
+            <div class="role">
+
+
+                <div class="role-panel">
+
+                    <h3>
+                        Your role at a glance
+                    </h3>
+
+                    <p>
+                        Your manager should help you understand
+                        your responsibilities, daily priorities,
+                        field activities, expected outcomes and
+                        the support available to you.
+                    </p>
+
+                    <br>
+
+                    <ul>
+
+                        <li>
+                            Understand your designation
+                            and reporting structure.
+                        </li>
+
+                        <li>
+                            Know your key day-to-day
+                            responsibilities.
+                        </li>
+
+                        <li>
+                            Understand field activities
+                            and operating processes.
+                        </li>
+
+                        <li>
+                            Know where to go when you face
+                            an operational blocker.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="role-panel">
+
+                    <h3>
+                        Your support network
+                    </h3>
+
+                    <p>
+
+                        <b>
+                            Reporting Manager
+                        </b>
+
+                        <br>
+
+                        Role guidance, coaching, targets
+                        and performance conversations.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        <b>
+                            Buddy / Peer
+                        </b>
+
+                        <br>
+
+                        Practical help with settling into
+                        the team and daily processes.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        <b>
+                            HR
+                        </b>
+
+                        <br>
+
+                        People-related support, onboarding
+                        and employee queries.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TARGETS -->
+
+        <section class="section" id="targets">
+
+            <div class="section-head">
+
+                <div>
+
+                    <div class="eyebrow">
+                        04 · Performance & Engagement
+                    </div>
+
+                    <h2>
+                        Targets with clarity and coaching
+                    </h2>
+
+                </div>
+
+                <p>
+                    Targets should be understood progressively,
+                    with coaching and support rather than
+                    unexpected pressure.
+                </p>
+
+            </div>
+
+
+            <table class="target-table">
+
+                <tr>
+
+                    <th>
+                        Stage
+                    </th>
+
+                    <th>
+                        Focus
+                    </th>
+
+                    <th>
+                        Manager conversation
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Week 1
+                    </td>
+
+                    <td>
+                        Learn & understand
+                    </td>
+
+                    <td>
+                        Role, process, field familiarisation
+                        and expectations
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Day 30
+                    </td>
+
+                    <td>
+                        Build capability
+                    </td>
+
+                    <td>
+                        Progress, training completion
+                        and coaching needs
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Day 60
+                    </td>
+
+                    <td>
+                        Improve consistency
+                    </td>
+
+                    <td>
+                        Gaps, support required and
+                        target readiness
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Day 90
+                    </td>
+
+                    <td>
+                        Grow forward
+                    </td>
+
+                    <td>
+                        Performance, engagement and
+                        next-stage goals
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- CHECK-IN -->
+
+        <section class="section" id="checkin">
+
+            <div class="section-head">
+
+                <div>
+
+                    <div class="eyebrow">
+                        05 · Employee Voice
+                    </div>
+
+                    <h2>
+                        Quick new-joiner check-in
+                    </h2>
+
+                </div>
+
+                <p>
+                    Mark the areas where you feel comfortable.
+                    Your responses can help identify where
+                    additional support may be useful.
+                </p>
+
+            </div>
+
+
+            <div class="check">
+
+
+                <div class="check-card">
+
+                    <span>
+                        My manager provides enough guidance.
+                    </span>
+
+                    <button onclick="toggleCheck(this)">
+                        Noted
+                    </button>
+
+                </div>
+
+
+                <div class="check-card">
+
+                    <span>
+                        I understand my role and priorities.
+                    </span>
+
+                    <button onclick="toggleCheck(this)">
+                        Noted
+                    </button>
+
+                </div>
+
+
+                <div class="check-card">
+
+                    <span>
+                        I have received sufficient training.
+                    </span>
+
+                    <button onclick="toggleCheck(this)">
+                        Noted
+                    </button>
+
+                </div>
+
+
+                <div class="check-card">
+
+                    <span>
+                        My targets and workload are clear.
+                    </span>
+
+                    <button onclick="toggleCheck(this)">
+                        Noted
+                    </button>
+
+                </div>
+
+
+                <div class="check-card">
+
+                    <span>
+                        I have the operational support I need.
+                    </span>
+
+                    <button onclick="toggleCheck(this)">
+                        Noted
+                    </button>
+
+                </div>
+
+
+                <div class="check-card">
+
+                    <span>
+                        I know whom to contact when I need help.
+                    </span>
+
+                    <button onclick="toggleCheck(this)">
+                        Noted
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUPPORT CTA -->
+
+        <section class="section">
+
+            <div class="cta">
+
+                <div>
+
+                    <h2>
+                        Need help getting settled?
+                    </h2>
+
+                    <p>
+                        Connect with your manager, buddy or
+                        HR support channel early whenever
+                        you need guidance.
+                    </p>
+
+                </div>
+
+
+                <button onclick="openModal('support')">
+                    Get Support
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <b>
+                    Aditya Birla Capital
+                </b>
+
+                <br>
+
+                <span class="footer-muted">
+                    Health Insurance · People & Culture
+                </span>
+
+            </div>
+
+
+            <div class="footer-muted">
+
+                New Joiner Experience · First 90 Days
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" onclick="closeModal()">
+                ×
+            </button>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalText"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const data = {
+
+            joining: {
+
+                title:
+                    'Joining Documents',
+
+                text:
+                    'Please complete the documents requested by the HR/onboarding process, including identity and personal details, education and experience records, bank/payroll information and other applicable joining formalities. If anything is pending or requires correction, raise it early.'
+
+            },
+
+
+            post: {
+
+                title:
+                    'Post-Joining Documents',
+
+                text:
+                    'Keep your employee records and required acknowledgements complete. Review any pending items communicated by HR and close them promptly so documentation does not become an operational blocker.'
+
+            },
+
+
+            support: {
+
+                title:
+                    'Your Support Network',
+
+                text:
+                    'Your reporting manager supports role clarity, coaching, targets and performance conversations. Your buddy or peer can help with practical day-to-day questions. HR can support onboarding, people-related and employee queries.'
+
+            },
+
+
+            training: {
+
+                title:
+                    'Learning & Training',
+
+                text:
+                    'Complete your initial training and learning activities, understand the processes required for your role and raise any training gap early. Your manager should help connect training with your day-to-day responsibilities.'
+
+            }
+
+        };
+
+
+        /* ================= MODAL ================= */
+
+        function openModal(key) {
+
+            document.getElementById(
+                'modalTitle'
+            ).textContent =
+                data[key].title;
+
+
+            document.getElementById(
+                'modalText'
+            ).textContent =
+                data[key].text;
+
+
+            document.getElementById(
+                'modal'
+            ).classList.add('open');
+
+        }
+
+
+        function closeModal() {
+
+            document.getElementById(
+                'modal'
+            ).classList.remove('open');
+
+        }
+
+
+        document
+            .getElementById('modal')
+            .addEventListener(
+                'click',
+                function (e) {
+
+                    if (
+                        e.target.id === 'modal'
+                    ) {
+
+                        closeModal();
+
+                    }
+
+                }
+            );
+
+
+        /* ================= NAVIGATION ================= */
+
+        function go(id) {
+
+            document
+                .getElementById(id)
+                .scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+        }
+
+
+        /* ================= CHECK-IN ================= */
+
+        function toggleCheck(btn) {
+
+            btn.classList.toggle('done');
+
+
+            if (
+                btn.classList.contains('done')
+            ) {
+
+                btn.textContent =
+                    'Completed';
+
+                showToast(
+                    'Check-in marked complete'
+                );
+
+            }
+
+            else {
+
+                btn.textContent =
+                    'Noted';
+
+                showToast(
+                    'Check-in reset'
+                );
+
+            }
+
+        }
+
+
+        /* ================= TOAST ================= */
+
+        function showToast(msg) {
+
+            const toast =
+                document.getElementById(
+                    'toast'
+                );
+
+
+            toast.textContent = msg;
+
+            toast.style.display =
+                'block';
+
+
+            clearTimeout(
+                window.toastTimer
+            );
+
+
+            window.toastTimer =
+                setTimeout(
+                    function () {
+
+                        toast.style.display =
+                            'none';
+
+                    },
+                    2200
+                );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
