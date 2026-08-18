@@ -238,6 +238,59 @@
             color: var(--navy);
         }
 
+        .survey-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 18px 9px 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--navy);
+            transition: all 0.2s ease;
+        }
+
+        .survey-btn:hover {
+            border-color: var(--red);
+            box-shadow: 0 8px 25px rgba(200, 16, 46, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .survey-btn .icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #fff0f1;
+            color: var(--red);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .survey-btn .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+        }
+
+        .survey-btn .text-wrapper b {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.2px;
+        }
+
+        .survey-btn .text-wrapper span {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 500;
+            line-height: 1.4;
+            margin-top: 1px;
+        }
+
         /* ================= CONTAINER ================= */
 
         .container {
@@ -969,11 +1022,13 @@
                     Contact Support
                 </button>
 
-                <div class="secondary" style="display: inline-flex; align-items: center; height: fit-content; font-weight: 700;">
-                <span style="color: var(--navy);">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKSZND-rvyH0wCmzHu1sx8_oQP2hNIyywejkhCH8S8wPqW5A/viewform?usp=publish-editor" target="_blank" style="color: var(--red); text-decoration: none;">Click or tap here</a> to fill out this survey form.
-                </span>
-            </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKSZND-rvyH0wCmzHu1sx8_oQP2hNIyywejkhCH8S8wPqW5A/viewform?usp=publish-editor" target="_blank" class="survey-btn">
+                    <div class="icon-wrapper">📝</div>
+                    <div class="text-wrapper">
+                        <b>New Joiner Survey</b>
+                        <span>Share your early feedback</span>
+                    </div>
+                </a>
 
             </div>
 
