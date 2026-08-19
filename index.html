@@ -55,7 +55,10 @@
             transition: all 0.2s ease;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
             color: var(--navy);
         }
@@ -74,7 +77,7 @@
             position: sticky;
             top: 0;
             z-index: 40;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
         }
 
         .brand {
@@ -265,7 +268,7 @@
             text-decoration: none;
             color: var(--navy);
             transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
         }
 
         .survey-btn:hover {
@@ -404,10 +407,25 @@
             margin-bottom: 18px;
         }
 
-        .why-icon.w1 { background: #fee2e2; color: var(--red); }
-        .why-icon.w2 { background: #fef3c7; color: #b45309; }
-        .why-icon.w3 { background: #dcfce7; color: #15803d; }
-        .why-icon.w4 { background: #e0e7ff; color: #4338ca; }
+        .why-icon.w1 {
+            background: #fee2e2;
+            color: var(--red);
+        }
+
+        .why-icon.w2 {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .why-icon.w3 {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .why-icon.w4 {
+            background: #e0e7ff;
+            color: #4338ca;
+        }
 
         .why-card h3 {
             font-size: 19px;
@@ -556,10 +574,25 @@
             font-size: 20px;
         }
 
-        .i1 { background: #fee2e2; color: var(--red); }
-        .i2 { background: #e0e7ff; color: #4338ca; }
-        .i3 { background: #fef3c7; color: #b45309; }
-        .i4 { background: #dcfce7; color: #15803d; }
+        .i1 {
+            background: #fee2e2;
+            color: var(--red);
+        }
+
+        .i2 {
+            background: #e0e7ff;
+            color: #4338ca;
+        }
+
+        .i3 {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .i4 {
+            background: #dcfce7;
+            color: #15803d;
+        }
 
         .card h3 {
             font-size: 19px;
@@ -679,9 +712,20 @@
             border-radius: 6px;
         }
 
-        .phase:nth-child(2) .day { color: #ea580c; background: #ffedd5; }
-        .phase:nth-child(3) .day { color: #b45309; background: #fef3c7; }
-        .phase:nth-child(4) .day { color: #15803d; background: #dcfce7; }
+        .phase:nth-child(2) .day {
+            color: #ea580c;
+            background: #ffedd5;
+        }
+
+        .phase:nth-child(3) .day {
+            color: #b45309;
+            background: #fef3c7;
+        }
+
+        .phase:nth-child(4) .day {
+            color: #15803d;
+            background: #dcfce7;
+        }
 
         .phase-dot {
             width: 10px;
@@ -690,9 +734,17 @@
             background: var(--red);
         }
 
-        .phase:nth-child(2) .phase-dot { background: var(--orange); }
-        .phase:nth-child(3) .phase-dot { background: var(--gold); }
-        .phase:nth-child(4) .phase-dot { background: var(--green); }
+        .phase:nth-child(2) .phase-dot {
+            background: var(--orange);
+        }
+
+        .phase:nth-child(3) .phase-dot {
+            background: var(--gold);
+        }
+
+        .phase:nth-child(4) .phase-dot {
+            background: var(--green);
+        }
 
         .phase h3 {
             font-size: 20px;
@@ -1193,6 +1245,37 @@
             gap: 8px;
         }
 
+        .doc-badge {
+            display: inline-block;
+            background: #fee2e2;
+            color: var(--red);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
+            letter-spacing: 0.2px;
+            vertical-align: middle;
+        }
+
+        .doc-list {
+            padding-left: 20px;
+            margin: 14px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .doc-list li {
+            line-height: 1.6;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .doc-list li strong {
+            color: var(--navy);
+        }
+
         /* ================= TOAST ================= */
 
         .toast {
@@ -1212,18 +1295,27 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* ================= RESPONSIVE ================= */
 
         @media (max-width: 1024px) {
+
             .why-us-grid,
             .cards,
             .timeline {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .role-wrapper {
                 grid-template-columns: 1fr;
             }
@@ -1233,43 +1325,54 @@
             .topbar {
                 padding: 0 4%;
             }
+
             .nav {
                 display: none;
             }
+
             .hero {
                 padding: 48px 5%;
             }
+
             h1 {
                 font-size: 36px;
             }
+
             .container {
                 padding: 40px 5% 60px;
             }
+
             .why-us-grid,
             .cards,
             .timeline,
             .check {
                 grid-template-columns: 1fr;
             }
+
             .vision-banner {
                 padding: 28px 24px;
             }
+
             .vision-banner h2 {
                 font-size: 22px;
             }
+
             .cta {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 30px 24px;
             }
+
             .footer-inner {
                 flex-direction: column;
                 align-items: flex-start;
             }
+
             .pledge-header-box {
                 flex-direction: column;
                 align-items: flex-start;
             }
+
             .action-banner {
                 flex-direction: column;
                 align-items: flex-start;
@@ -1319,7 +1422,8 @@
             </h1>
 
             <p>
-                Welcome to ABHI! Everything you need to complete your onboarding formalities, understand your field sales role, connect with your mentor network, and accelerate success in your first 90 days.
+                Welcome to ABHI! Everything you need to complete your onboarding formalities, understand your field
+                sales role, connect with your mentor network, and accelerate success in your first 90 days.
             </p>
 
             <div class="hero-actions">
@@ -1332,8 +1436,7 @@
                     Get Support & Manager Details
                 </button>
 
-                <a href="https://forms.gle/paUYztSwT7J7w2Lz5"
-                    target="_blank" class="survey-btn">
+                <a href="https://forms.gle/paUYztSwT7J7w2Lz5" target="_blank" class="survey-btn">
                     <div class="icon-wrapper">📝</div>
                     <div class="text-wrapper">
                         <b>New Joiner Survey</b>
@@ -1355,10 +1458,14 @@
         <div class="vision-banner">
             <span class="vision-tag">Our Guiding Purpose</span>
             <h2>
-                "To be a trusted partner in our customers' health and wellness journey, empowering individuals and families to lead healthier lives through innovative, comprehensive, and simplified health insurance solutions."
+                "To be a trusted partner in our customers' health and wellness journey, empowering individuals and
+                families to lead healthier lives through innovative, comprehensive, and simplified health insurance
+                solutions."
             </h2>
             <p>
-                At Aditya Birla Health Insurance (ABHI), we go beyond traditional claims financing. We believe in actively incentivizing wellness, managing chronic conditions proactively, and delivering genuine care when our policyholders need us most.
+                At Aditya Birla Health Insurance (ABHI), we go beyond traditional claims financing. We believe in
+                actively incentivizing wellness, managing chronic conditions proactively, and delivering genuine care
+                when our policyholders need us most.
             </p>
         </div>
 
@@ -1368,7 +1475,8 @@
                 <div class="why-icon w1">🏛️</div>
                 <h3>Aditya Birla Legacy</h3>
                 <p>
-                    Part of a US $65+ Billion global Fortune 500 powerhouse. Rooted in 165+ years of uncompromised trust, values, and customer commitment.
+                    Part of a US $65+ Billion global Fortune 500 powerhouse. Rooted in 165+ years of uncompromised
+                    trust, values, and customer commitment.
                 </p>
             </div>
 
@@ -1376,7 +1484,8 @@
                 <div class="why-icon w2">🌱</div>
                 <h3>Wellness Innovation</h3>
                 <p>
-                    Pioneers of the industry-first <b>HealthReturns™</b> philosophy — empowering customers to stay active while earning back up to 100% of their premium.
+                    Pioneers of the industry-first <b>HealthReturns™</b> philosophy — empowering customers to stay
+                    active while earning back up to 100% of their premium.
                 </p>
             </div>
 
@@ -1384,7 +1493,8 @@
                 <div class="why-icon w3">📈</div>
                 <h3>High-Growth Career</h3>
                 <p>
-                    Rapidly scaling health insurer with transparent meritocracy, fast-track promotions, uncapped rewards, and premier sales leadership programs.
+                    Rapidly scaling health insurer with transparent meritocracy, fast-track promotions, uncapped
+                    rewards, and premier sales leadership programs.
                 </p>
             </div>
 
@@ -1392,7 +1502,8 @@
                 <div class="why-icon w4">🤝</div>
                 <h3>Supportive Culture</h3>
                 <p>
-                    A vibrant, people-first workplace where continuous learning, manager mentoring, peer support, and ethical excellence drive collective success.
+                    A vibrant, people-first workplace where continuous learning, manager mentoring, peer support, and
+                    ethical excellence drive collective success.
                 </p>
             </div>
 
@@ -1416,7 +1527,8 @@
                     <h2>Your onboarding essentials</h2>
                 </div>
                 <p>
-                    Complete your documentation, connect with your support mentors, and get equipped with tools for a smooth start.
+                    Complete your documentation, connect with your support mentors, and get equipped with tools for a
+                    smooth start.
                 </p>
             </div>
 
@@ -1426,9 +1538,9 @@
                 <div class="card">
                     <div class="card-top">
                         <div class="icon i1">📋</div>
-                        <h3>Joining & Post-Joining Documents</h3>
+                        <h3>Joining Documents</h3>
                         <p>
-                            Comprehensive checklist covering identity proofs, academic degrees, relieving letters, banking records, and post-joining compliance forms.
+                            Checklist of 12 mandatory documents, format requirements (PDF/CIBIL), and Aditya Birla Group re-hire guidelines.
                         </p>
                     </div>
                     <button class="card-footer-btn" onclick="openModal('docs')">
@@ -1442,7 +1554,8 @@
                         <div class="icon i2">👥</div>
                         <h3>Manager, Training & HR Connect</h3>
                         <p>
-                            Connect with your Recruiter to get contact details for your Reporting Manager, Training Lead (Sumit), HR Partner, and assigned branch Buddy.
+                            Connect with your Recruiter to get contact details for your Reporting Manager, Training
+                            Lead, HR Partner, and assigned branch Buddy.
                         </p>
                     </div>
                     <button class="card-footer-btn" onclick="openModal('support')">
@@ -1456,7 +1569,8 @@
                         <div class="icon i3">📱</div>
                         <h3>Sales Tools & App Access</h3>
                         <p>
-                            Set up your ABHI Sales Portal, mobile quote generator, CRM credentials, and IT hardware setup for seamless field operations.
+                            Set up your ABHI Sales Portal, mobile quote generator, CRM credentials, and IT hardware
+                            setup for seamless field operations.
                         </p>
                     </div>
                     <button class="card-footer-btn" onclick="openModal('tools')">
@@ -1470,7 +1584,8 @@
                         <div class="icon i4">🎓</div>
                         <h3>Induction & ABHI Academy</h3>
                         <p>
-                            Attend orientation sessions, product mastery modules, IRDAI certifications, and sales pitch simulations to build confidence early.
+                            Attend orientation sessions, product mastery modules, IRDAI certifications, and sales pitch
+                            simulations to build confidence early.
                         </p>
                     </div>
                     <button class="card-footer-btn" onclick="openModal('induction')">
@@ -1504,7 +1619,8 @@
                     <h2>First 90 days roadmap with target clarity</h2>
                 </div>
                 <p>
-                    A phased growth trajectory with clear focus areas, progressive target expectations, and dedicated coaching at every milestone.
+                    A phased growth trajectory with clear focus areas, progressive target expectations, and dedicated
+                    coaching at every milestone.
                 </p>
             </div>
 
@@ -1514,7 +1630,8 @@
                     <div class="action-banner-icon">💡</div>
                     <div class="action-banner-text">
                         <b>Immediate Action Item for Day 1–2:</b>
-                        <p>Connect with <strong>Sumit from Training</strong> tomorrow to walk through your personalized 90-day learning journey, branch schedule, and channel target roadmap.</p>
+                        <p>Connect with <strong>Sumit from Training</strong> tomorrow to walk through your personalized
+                            90-day learning journey, branch schedule, and channel target roadmap.</p>
                     </div>
                 </div>
                 <span class="action-badge">Priority Action</span>
@@ -1531,7 +1648,8 @@
                         </div>
                         <h3>Settle In & Learn</h3>
                         <p class="phase-focus">
-                            Complete joining formalities, connect with Sumit from Training, meet your Reporting Manager & Buddy, and achieve 100% portal & product certification.
+                            Complete joining formalities, connect with Sumit from Training, meet your Reporting Manager
+                            & Buddy, and achieve 100% portal & product certification.
                         </p>
                     </div>
                     <div class="phase-target-box">
@@ -1549,12 +1667,14 @@
                         </div>
                         <h3>Joint Field Work</h3>
                         <p class="phase-focus">
-                            Shadow your manager/buddy on live customer visits, understand distributor and partner channels, and practice customer need-discovery.
+                            Shadow your manager/buddy on live customer visits, understand distributor and partner
+                            channels, and practice customer need-discovery.
                         </p>
                     </div>
                     <div class="phase-target-box">
                         <strong>Target Clarity:</strong>
-                        Complete 10–15 joint customer calls, activate first 2–3 agent/partner leads, close first milestone policy.
+                        Complete 10–15 joint customer calls, activate first 2–3 agent/partner leads, close first
+                        milestone policy.
                     </div>
                 </div>
 
@@ -1567,7 +1687,8 @@
                         </div>
                         <h3>Build Momentum</h3>
                         <p class="phase-focus">
-                            Conduct independent customer meetings, expand agent/channel relationships, track weekly pipeline health, and review conversion metrics.
+                            Conduct independent customer meetings, expand agent/channel relationships, track weekly
+                            pipeline health, and review conversion metrics.
                         </p>
                     </div>
                     <div class="phase-target-box">
@@ -1585,7 +1706,8 @@
                         </div>
                         <h3>Full Scale & Mastery</h3>
                         <p class="phase-focus">
-                            Drive autonomous sales execution, master multi-product solutions (Activ Health, Activ One), build referral funnels, and celebrate 90-day progress.
+                            Drive autonomous sales execution, master multi-product solutions (Activ Health, Activ One),
+                            build referral funnels, and celebrate 90-day progress.
                         </p>
                     </div>
                     <div class="phase-target-box">
@@ -1619,7 +1741,9 @@
                     <span class="role-badge">Field Sales Role</span>
                     <h3>Protecting Lives, Empowering Health</h3>
                     <p class="role-lead">
-                        As a Field Sales professional at Aditya Birla Health Insurance, you are the face of ABHI in the community. You consult, educate, and advise families on securing their health and financial well-being.
+                        As a Field Sales professional at Aditya Birla Health Insurance, you are the face of ABHI in the
+                        community. You consult, educate, and advise families on securing their health and financial
+                        well-being.
                     </p>
 
                     <div class="role-points">
@@ -1628,7 +1752,8 @@
                             <div class="role-point-icon">🚗</div>
                             <div class="role-point-text">
                                 <b>Travel & Meet Customers</b>
-                                <p>Travel around your territory to meet new potential customers, understand their family health concerns, and service existing policyholders with care.</p>
+                                <p>Travel around your territory to meet new potential customers, understand their family
+                                    health concerns, and service existing policyholders with care.</p>
                             </div>
                         </div>
 
@@ -1636,7 +1761,8 @@
                             <div class="role-point-icon">💡</div>
                             <div class="role-point-text">
                                 <b>Need-Based Solution Advisory</b>
-                                <p>Understand customer needs and sell suitable health insurance plans at the time and place of their convenience.</p>
+                                <p>Understand customer needs and sell suitable health insurance plans at the time and
+                                    place of their convenience.</p>
                             </div>
                         </div>
 
@@ -1644,7 +1770,8 @@
                             <div class="role-point-icon">🤝</div>
                             <div class="role-point-text">
                                 <b>Build Strong Partner & Agent Relationships</b>
-                                <p>Recruit, activate, and maintain strong, mutually rewarding relationships with agents, distributors, and channel partners.</p>
+                                <p>Recruit, activate, and maintain strong, mutually rewarding relationships with agents,
+                                    distributors, and channel partners.</p>
                             </div>
                         </div>
 
@@ -1652,7 +1779,8 @@
                             <div class="role-point-icon">🎯</div>
                             <div class="role-point-text">
                                 <b>Achieve Monthly Targets & Goals</b>
-                                <p>Proactively manage your daily pipeline, schedule client appointments, and consistently achieve monthly sales targets and milestones.</p>
+                                <p>Proactively manage your daily pipeline, schedule client appointments, and
+                                    consistently achieve monthly sales targets and milestones.</p>
                             </div>
                         </div>
 
@@ -1665,7 +1793,9 @@
                         <div>
                             <h4>The ABHI Field Edge</h4>
                             <p>
-                                You are equipped with digital tools, instant quote calculators, and our unique HealthReturns™ proposition that makes health insurance attractive and rewarding for every Indian family.
+                                You are equipped with digital tools, instant quote calculators, and our unique
+                                HealthReturns™ proposition that makes health insurance attractive and rewarding for
+                                every Indian family.
                             </p>
                         </div>
                         <div class="role-tag-list">
@@ -1692,7 +1822,8 @@
                     <h2>Joiner commitment & professional pledge</h2>
                 </div>
                 <p>
-                    Our shared pledge to role ownership, ethical advisory, transparent communication, and continuous growth.
+                    Our shared pledge to role ownership, ethical advisory, transparent communication, and continuous
+                    growth.
                 </p>
             </div>
 
@@ -1700,7 +1831,8 @@
                 <div class="pledge-header-text">
                     <h3>The ABHI Professional Standards Pledge</h3>
                     <p>
-                        Review and affirm the 6 foundational commitments that define our standard of excellence, customer trust, and personal integrity at Aditya Birla Capital.
+                        Review and affirm the 6 foundational commitments that define our standard of excellence,
+                        customer trust, and personal integrity at Aditya Birla Capital.
                     </p>
                 </div>
                 <div class="pledge-status-pill" id="pledgeCounter">
@@ -1718,7 +1850,8 @@
                             <span class="check-title">Ethical Sales Practices</span>
                         </div>
                         <p class="check-desc" style="margin-top: 10px;">
-                            "I pledge to uphold the highest standards of integrity, transparency, and fair sales practices in every customer and partner interaction."
+                            "I pledge to uphold the highest standards of integrity, transparency, and fair sales
+                            practices in every customer and partner interaction."
                         </p>
                     </div>
                     <div class="check-action-bar">
@@ -1737,7 +1870,8 @@
                             <span class="check-title">Role & Field Discipline</span>
                         </div>
                         <p class="check-desc" style="margin-top: 10px;">
-                            "I commit to taking active ownership of my daily field activities, customer outreach, prompt servicing, and continuous professional development."
+                            "I commit to taking active ownership of my daily field activities, customer outreach, prompt
+                            servicing, and continuous professional development."
                         </p>
                     </div>
                     <div class="check-action-bar">
@@ -1756,7 +1890,8 @@
                             <span class="check-title">Target & Goal Clarity</span>
                         </div>
                         <p class="check-desc" style="margin-top: 10px;">
-                            "I understand my sales targets and will proactively build my pipeline, seek coaching early, and strive for consistent milestone achievement."
+                            "I understand my sales targets and will proactively build my pipeline, seek coaching early,
+                            and strive for consistent milestone achievement."
                         </p>
                     </div>
                     <div class="check-action-bar">
@@ -1775,7 +1910,8 @@
                             <span class="check-title">Need-Based Suitability</span>
                         </div>
                         <p class="check-desc" style="margin-top: 10px;">
-                            "I pledge to always recommend the right health insurance solutions tailored to genuine customer needs and provide clear, truthful policy disclosures."
+                            "I pledge to always recommend the right health insurance solutions tailored to genuine
+                            customer needs and provide clear, truthful policy disclosures."
                         </p>
                     </div>
                     <div class="check-action-bar">
@@ -1794,7 +1930,8 @@
                             <span class="check-title">Regulatory & Policy Norms</span>
                         </div>
                         <p class="check-desc" style="margin-top: 10px;">
-                            "I commit to adhering strictly to all ABHI operational guidelines, IRDAI regulations, confidentiality norms, and company code of conduct."
+                            "I commit to adhering strictly to all ABHI operational guidelines, IRDAI regulations,
+                            confidentiality norms, and company code of conduct."
                         </p>
                     </div>
                     <div class="check-action-bar">
@@ -1813,7 +1950,8 @@
                             <span class="check-title">Proactive Teamwork & Learning</span>
                         </div>
                         <p class="check-desc" style="margin-top: 10px;">
-                            "I will actively collaborate with my manager, training mentors (Sumit), and branch buddy to learn continuously and solve field challenges."
+                            "I will actively collaborate with my manager, training mentors (Sumit), and branch buddy to
+                            learn continuously and solve field challenges."
                         </p>
                     </div>
                     <div class="check-action-bar">
@@ -1830,7 +1968,8 @@
             <div class="pledge-completion-banner" id="pledgeSuccess">
                 <h3>🎉 Congratulations! You have completed the ABHI Professional Pledge.</h3>
                 <p>
-                    You are now fully committed to the Aditya Birla standard of excellence, integrity, and customer care. Welcome to the team!
+                    You are now fully committed to the Aditya Birla standard of excellence, integrity, and customer
+                    care. Welcome to the team!
                 </p>
             </div>
 
@@ -1846,7 +1985,8 @@
                 <div>
                     <h2>Ready to get started?</h2>
                     <p>
-                        Reach out to your Recruiter, Reporting Manager, or Training Lead whenever you need guidance. We are committed to your growth and success!
+                        Reach out to your Recruiter, Reporting Manager, or Training Lead whenever you need guidance. We
+                        are committed to your growth and success!
                     </p>
                 </div>
 
@@ -1917,35 +2057,32 @@
         const data = {
 
             docs: {
-                title: 'Joining & Post-Joining Documentation Checklist',
+                title: 'Joining Documents',
                 text: `
-                    <div class="modal-alert">
-                        <strong>📌 Submission Guidelines:</strong> Upload clear, scanned PDF copies of the following documents through the onboarding portal link or email them to your assigned HR onboarding specialist.
+                    <div class="modal-alert" style="background: #eff6ff; border-left: 4px solid #2563eb; color: #1e40af; margin-bottom: 16px; font-weight: 600; font-size: 14px;">
+                        📌 All documents must be in proper format and clearly visible
                     </div>
 
-                    <div class="modal-section-title">📄 1. Pre-Joining Mandatory Documents</div>
-                    <ul>
-                        <li><strong>Identity & Age Proof:</strong> PAN Card (Mandatory), Aadhaar Card / Valid Passport / Voter ID.</li>
-                        <li><strong>Educational Certificates:</strong> 10th, 12th, and Graduation / Post-Graduation final degree certificates and marksheets.</li>
-                        <li><strong>Previous Employment Records:</strong> Relieving Letter, Experience / Service Certificate from your last employer, and resignation acceptance email.</li>
-                        <li><strong>Income Proof:</strong> Last 3 consecutive months' pay slips and Form 16 / Tax summary from previous employer.</li>
-                        <li><strong>Bank Account Verification:</strong> Cancelled cheque or bank passbook copy clearly displaying your Name, Account Number, and IFSC code.</li>
-                        <li><strong>Passport Size Photos:</strong> 4 recent passport-size photographs with a clean white background.</li>
-                        <li><strong>Statutory Details:</strong> Universal Account Number (UAN) for Provident Fund (PF) and ESIC number (if applicable).</li>
-                        <li><strong>Signed Offer Letter:</strong> Signed copy of the ABHI offer letter and background verification (BGV) consent declaration.</li>
-                    </ul>
+                    <div class="modal-section-title">📄 Mandatory Documents List</div>
+                    <ol class="doc-list">
+                        <li><strong>E-Aadhaar Card only</strong> <span class="doc-badge">PDF Format</span></li>
+                        <li><strong>PAN Card</strong> <span class="doc-badge">PDF Format</span></li>
+                        <li><strong>Updated Resume</strong> – mention tenure (start date and end date for all your experiences)</li>
+                        <li><strong>Full CIBIL REPORT</strong></li>
+                        <li><strong>Graduation Marks Sheet</strong> <span class="doc-badge">PDF Format</span></li>
+                        <li><strong>Graduation Degree Certificate</strong> <span class="doc-badge">PDF Format</span></li>
+                        <li><strong>Offer Letter/ Appointment and Increment Letter</strong> (if any)</li>
+                        <li><strong>Last 3 payslips</strong> from current organization</li>
+                        <li><strong>Relieving Letter</strong> of 2nd Last Company.</li>
+                        <li><strong>Name Printed Bank Cheque / Bank Passbook</strong></li>
+                        <li><strong>PF Passbook</strong></li>
+                        <li><strong>PF Service History</strong></li>
+                    </ol>
 
-                    <div class="modal-section-title">📝 2. Post-Joining Documentation & Compliance</div>
-                    <ul>
-                        <li><strong>Code of Conduct & Ethics Acknowledgement:</strong> Complete the digital sign-off on the employee portal within your first 3 days.</li>
-                        <li><strong>IT Asset & Information Security Undertaking:</strong> Acknowledge safe usage of laptop, sales mobile app, and client data protection rules.</li>
-                        <li><strong>Statutory Nomination Forms:</strong> Submit nominee declarations for Gratuity and Group Term Life / Mediclaim Insurance.</li>
-                        <li><strong>Employee ID & Access:</strong> Submit photo for official smart card ID generation and biometric branch access.</li>
-                    </ul>
-
-                    <p style="margin-top: 14px; font-size: 13px; color: #6b7280;">
-                        <em>Need assistance with documentation? Reach out to your Talent Acquisition Recruiter or HR Onboarding Partner for prompt resolution.</em>
-                    </p>
+                    <div class="modal-alert" style="background: #fef2f2; border-left: 4px solid #dc2626; color: #991b1b; margin-top: 18px; line-height: 1.6; font-size: 13.5px;">
+                        <strong style="display: block; margin-bottom: 4px; font-size: 14px;">⚠️ IMP:</strong>
+                        Pls confirm whether you have worked before in any entity of Aditya Birla Group or not, if yes, pls share Reliving Letter for re-hire checking at our end. Any experience in Aditya Birla Group must be mentioned in resume. In case of any violation, offer may be rejected later.
+                    </div>
                 `
             },
 
@@ -2032,7 +2169,7 @@
             }
         });
 
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeModal();
             }
@@ -2045,12 +2182,12 @@
             const el = document.getElementById(id);
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
-                
+
                 // Update active nav button
                 document.querySelectorAll('.nav button').forEach(btn => {
                     btn.classList.remove('active');
                 });
-                const activeBtn = Array.from(document.querySelectorAll('.nav button')).find(b => 
+                const activeBtn = Array.from(document.querySelectorAll('.nav button')).find(b =>
                     b.getAttribute('onclick') && b.getAttribute('onclick').includes(id)
                 );
                 if (activeBtn) activeBtn.classList.add('active');
@@ -2066,7 +2203,7 @@
         function togglePledge(btn, cardId) {
             const card = document.getElementById(cardId);
             btn.classList.toggle('done');
-            
+
             if (btn.classList.contains('done')) {
                 btn.innerHTML = 'Pledged ✓';
                 if (card) card.classList.add('pledged');
@@ -2086,7 +2223,7 @@
             const basePercent = 35;
             const extraPercent = Math.round((pledgedCount / totalPledges) * 65);
             const totalPercent = basePercent + extraPercent;
-            
+
             document.getElementById('percent').textContent = `${totalPercent}%`;
             document.getElementById('fill').style.width = `${totalPercent}%`;
 
