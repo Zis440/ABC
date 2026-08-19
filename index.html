@@ -1595,16 +1595,6 @@
 
             </div>
 
-            <!-- Onboarding Progress Bar -->
-            <div class="progress">
-                <div class="progress-top">
-                    <strong>Overall Onboarding Readiness</strong>
-                    <span class="percent" id="percent">35%</span>
-                </div>
-                <div class="bar">
-                    <div class="fill" id="fill" style="width: 35%;"></div>
-                </div>
-            </div>
 
         </section>
 
@@ -2219,13 +2209,6 @@
             // Update counter pill
             document.getElementById('pledgeCounter').textContent = `${pledgedCount} of ${totalPledges} Pledges Taken`;
 
-            // Update progress bar
-            const basePercent = 35;
-            const extraPercent = Math.round((pledgedCount / totalPledges) * 65);
-            const totalPercent = basePercent + extraPercent;
-
-            document.getElementById('percent').textContent = `${totalPercent}%`;
-            document.getElementById('fill').style.width = `${totalPercent}%`;
 
             // Check if all pledges are done
             const successBanner = document.getElementById('pledgeSuccess');
