@@ -282,36 +282,36 @@
         .survey-btn {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            padding: 10px 20px 10px 14px;
-            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-            border: 1.5px solid #fca5a5;
+            gap: 14px;
+            padding: 10px 16px 10px 14px;
+            background: #ffffff;
+            border: 2px solid var(--red);
             border-radius: 12px;
             text-decoration: none;
             color: var(--navy);
             transition: all 0.25s ease;
-            box-shadow: 0 4px 14px rgba(200, 16, 46, 0.08);
+            box-shadow: 0 4px 18px rgba(200, 16, 46, 0.15);
             position: relative;
         }
 
         .survey-btn:hover {
-            border-color: var(--red);
-            box-shadow: 0 8px 24px rgba(200, 16, 46, 0.18);
             transform: translateY(-2px);
-            background: #fff;
+            box-shadow: 0 8px 25px rgba(200, 16, 46, 0.25);
+            background: #fff8f8;
         }
 
         .survey-btn .icon-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: var(--red-light);
-            color: var(--red);
+            width: 38px;
+            height: 38px;
+            background: var(--red);
+            color: #ffffff;
             border-radius: 10px;
             font-size: 18px;
-            border: 1px solid #fecdd3;
+            box-shadow: 0 2px 8px rgba(200, 16, 46, 0.3);
+            flex-shrink: 0;
         }
 
         .survey-btn .text-wrapper {
@@ -324,7 +324,7 @@
         .survey-btn .text-wrapper b {
             font-size: 14.5px;
             font-weight: 800;
-            color: var(--red-dark);
+            color: var(--navy);
             line-height: 1.2;
             letter-spacing: -0.2px;
         }
@@ -333,8 +333,29 @@
             font-size: 11.5px;
             color: #4b5563;
             font-weight: 600;
-            line-height: 1.4;
+            line-height: 1.3;
             margin-top: 2px;
+        }
+
+        .survey-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--red-light);
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            margin-left: 4px;
+        }
+
+        .survey-btn:hover .survey-arrow {
+            background: var(--red);
+            color: #ffffff;
+            transform: translateX(3px);
         }
 
         /* ================= VISION & WHY JOIN US SECTION ================= */
@@ -1462,6 +1483,7 @@
                         <b>New Joiner Survey</b>
                         <span>Share your early onboarding feedback</span>
                     </div>
+                    <span class="survey-arrow">Take Survey →</span>
                 </a>
 
             </div>
